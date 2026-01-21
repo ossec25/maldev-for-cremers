@@ -11,7 +11,7 @@
 ---
 
 ## Remarques : 
-Mes solutions personnelles sont intégrées **dans la structure initiale du workshop** (sans modifier les énoncés ni les solutions de référence) sous le titre **devoir_cremers** sous chacun des exercices, dans le langage C#.
+Mes solutions personnelles sont intégrées **dans la structure initiale du workshop** (sans modifier les énoncés ni les solutions de référence) sous le titre **devoir_cremers** sous chacun des exercices, sous le langage C#.
 
 Chaque exercice contient :
 - un README explicatif
