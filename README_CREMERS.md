@@ -11,8 +11,7 @@
 ---
 
 ## Remarques : 
-Mes solutions personnelles sont intégrées **dans la structure initiale du workshop** sous le titre **devoir_cremers**,  
-sans modifier les énoncés ni les solutions de référence du workshop.
+Mes solutions personnelles sont intégrées **dans la structure initiale du workshop** sous le titre **devoir_cremers** sous chacun des exercices, sans modifier les énoncés ni les solutions de référence du workshop.
 
 Chaque exercice contient :
 - un README explicatif
