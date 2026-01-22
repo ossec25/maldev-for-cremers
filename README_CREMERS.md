@@ -17,12 +17,12 @@ Chaque exercice contient :
 - un README explicatif
 - les sources
 - le binaire compilé
-- un retour d’expérience 
+- des screenshots 
 ---
 
 ## Exercices réalisés
 
-### 🟢 Exercice 0 – Environnement de développement
+### Exercice 0 – Environnement de développement
 Mise en place de l’infrastructure de travail sous Ludus :
 - Machine de développement (Windows 11)
 - Machine cible (Windows 11)
@@ -34,15 +34,15 @@ Mise en place de l’infrastructure de travail sous Ludus :
 
 ---
 
-### 🟢 Exercice 1 – Basic Shellcode Loader (C#)
-Implémentation d’un chargeur exécutant du code en mémoire à l’aide des API Windows
+### Exercice 1 – Basic Shellcode Loader (C#)
+Implémentation d’un loader exécutant du code en mémoire à l’aide des API Windows
 via P/Invoke, en C#.
 
 Le travail comprend :
 - le code source du projet Visual Studio
 - le binaire compilé (Release / x64)
-- une documentation expliquant la démarche
-- un retour d’expérience (problèmes rencontrés et solutions)
+- un README expliquant la démarche
+- des screenshots
 
 📁 Emplacement :  
 `Exercises/Exercise 1 - Basic Shellcode Loader/solutions/csharp/cremers/`
