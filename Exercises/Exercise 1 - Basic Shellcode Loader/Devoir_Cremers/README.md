@@ -28,6 +28,8 @@ Le shellcode calc.exe est un payload de démonstration (donc non destructif). In
 ## 2. Test
 Avant de créer un loader complet, j'ai testé le programme C# sur la VM de développement en maintenant la sécurité Windows Defender et en enlevant l'appel à l'API CreateThread. J'ai pu constater que sans la partie exécutoire, les appels aux autres API Windows natives, bien que constituant un pattern suspect, ne provoquent aucune réaction de sécurité (et pourraient donc probablement être utilisées ensemble dans certaines opérations ordinaires). 
 
-## 3. Choix du loader "Messagebox"
+## 3. Exécution du loader "Messagebox"
 Je choisis un autre loader innofensif (de démonstration) pour C# en Windows x64 : Messagebox. 
-Ce loader effectue également un appel P/Invoke aux trois API natives Windows précitées (VirtualAlloc, CreateThread et WaitFor
+Ce loader effectue également un appel P/Invoke aux trois API natives Windows précitées (VirtualAlloc, CreateThread et WaitForSingleObject) ainsi qu'à la méthode Marshal.Copy). Le loader alloue donc également une zone mémoire (VirtualAlloc), y copie les octets du shellcode (Marshal.Copy), démarre un thread (CreateThread), ce qui permet au shellcode de s'exécuter en mémoire en attendant la fin du thread (WaitForSingleObject) positionné sur un timing infini. 
+Pour produire le shellcode, j'installe Mestasploit sur un clône de la machine Kali configurée dans mon range Ludus et je génère le payload windows/x64/messagebox via msfvenom. Je copie le payload produit dans mon loader sur Visual Studio, en adaptant le nom et la taille du buffer (362 bytes) dans la commande de création du tableau.
+Ce shellcode affiche une boîte de texte (un pop-up) produisant un titre et du texte.   
