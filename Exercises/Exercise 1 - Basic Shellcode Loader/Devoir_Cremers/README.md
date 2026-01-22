@@ -26,4 +26,8 @@ Les constantes EXECUTEREADWRITE = 0x40 et COMMIT_RESERVE = 0x3000 correspondent 
 Le shellcode calc.exe est un payload de démonstration (donc non destructif). Intégré dans le loader sous forme de tableau, les bytes de ce binaire d'instructions machine généré par msfvenom de Metasploit, seront copiés par Marshal.Copy vers la mémoire native à PayAddr. 
 
 ## 2. Test
-Avant de   
+Avant de créer un loader complet, j'ai testé le programme C# sur la VM de développement en maintenant la sécurité Windows Defender et en enlevant l'appel à l'API CreateThread. J'ai pu constater que sans la partie exécutoire, les appels aux autres API Windows natives, bien que constituant un pattern suspect, ne provoquent aucune réaction de sécurité (et pourraient donc probablement être utilisées ensemble dans certaines opérations ordinaires). 
+
+## 3. Choix du loader "Messagebox"
+Je choisis un autre loader innofensif (de démonstration) pour C# en Windows x64 : Messagebox. 
+Ce loader effectue également un appel P/Invoke aux trois API natives Windows précitées (VirtualAlloc, CreateThread et WaitFor
