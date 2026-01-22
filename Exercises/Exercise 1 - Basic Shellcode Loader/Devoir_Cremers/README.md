@@ -1,4 +1,4 @@
-### Méthodologie
+# Méthodologie
 
 ## 1.Observation et analyse
 Pour créer mon propre loader, j'ai tout d'abord examiné la solution présentée dans le workshop et je l'ai comparée avec d'autres solutions trouvées en ligne. 
@@ -19,6 +19,8 @@ La WinAPI *CreateThread comprend les paramètres utiles suivants :
 - dwCreationFlags : Flag de démarrage du thread (ici 0, c'est à dire démarrage immédiat)
 
 La WinAPI *WaitForSingleObject attend qu'un objet Kernel (ici le thread) soit terminé. 
-- dwMilliseconds : délai d'attente (ici -1, c-a-d attente infinie, ce qui va permettre au shellcode de s'exécuter sans que le thread ne se ferme trop tôt
+- dwMilliseconds : délai d'attente (ici -1, c-a-d attente infinie, ce qui va permettre au shellcode de s'exécuter sans que le thread ne se ferme trop tôt. µ
 
-Le shellcode est un payload de démonstration (donc sans 
+Les constantes EXECUTEREADWRITE = 0x40 et COMMIT_RESERVE = 0x3000
+
+Le shellcode calc.exe est un payload de démonstration (donc non destructif).  
