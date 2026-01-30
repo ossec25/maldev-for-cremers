@@ -99,7 +99,8 @@ CloseHandle(procHandle);*
 
 Les handles ouverts précédemment sont fermés afin d’éviter toute fuite de ressources système.
 
-
+## Retour d'expérience
+- En tentant d'exécuter le fichier *MaldevEx2bonus.exe* directement en double cliquant dessus, la fenêtre s'ouvrait et se fermait instantanément. Il m'était donc impossible de 
 
 
 
