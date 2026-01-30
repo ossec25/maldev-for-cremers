@@ -78,6 +78,26 @@ Ce handle représente une référence système permettant d’interagir avec le 
 Le programme alloue une zone mémoire dans l’espace d’adressage du processus cible 
 
 
+### Phase d'écriture des données en mémoire distante 
+
+*bool ok = WriteProcessMemory(procHandle, memAddr, sc, len, out bytesWritten);*
+
+Le contenu du shellcode est copié dans la mémoire précédemment allouée du processus cible.
+
+
+### Phase de déclenchement de l'exécution
+
+*IntPtr tAddr = CreateRemoteThread(procHandle, IntPtr.Zero, 0, memAddr, IntPtr.Zero, 0, IntPtr.Zero);
+
+Le programme demande au système de créer un nouveau thread dans le processus cible, dont le point d’entrée correspond à l’adresse mémoire où les données ont été écrites.
+
+
+### Phase de libération des ressources
+
+*CloseHandle(tAddr);
+CloseHandle(procHandle);*
+
+Les handles ouverts précédemment sont fermés afin d’éviter toute fuite de ressources système.
 
 
 
