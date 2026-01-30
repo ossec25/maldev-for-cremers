@@ -21,6 +21,7 @@ A la lecture de l'énoncé et du programme figurant en solution d'exemple, je co
 Par cette phase, le programme vérifie que exactement un argument a été fourni lors de l’exécution.
 Cet argument correspond au nom du processus cible.
 
+
 - Phase de normalisation du nom du processus :
 
 *string targetProcName = args[0].Trim();
@@ -29,6 +30,7 @@ if (targetProcName.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
     
 Le nom du processus fourni par l’utilisateur est nettoyé (suppression des espaces inutiles, retrait éventuel de l’extension .exe).
 Cette étape est nécessaire car l’API GetProcessesByName() attend un nom sans extension.
+
 
 - Phase de recherche du processus cible existant :
 
@@ -52,6 +54,29 @@ Si aucune instance du processus n'est trouvée, le programme tente de lancer l'e
     p.Start();
     pid = p.Id;
 }*
+
+
+- Phase d'affichage de la cible sélectionnée :
+
+*Console.WriteLine($"Target process: {targetProcName} [{pid}].");*
+
+Le programme affiche le nom du processus cible et son PID.
+
+
+- Phase d'obtention d'un handle vers le processus cible :
+
+*IntPtr procHandle = OpenProcess(ProcessAccessFlags.All, false, pid);*
+
+Une requête est envoyée au système afin d’obtenir un handle vers le processus cible.
+Ce handle représente une référence système permettant d’interagir avec le processus.
+
+
+- Phase d'allocation de mémoire dans le processus cible 
+
+*IntPtr memAddr = VirtualAllocEx(procHandle, IntPtr.Zero, (uint)len, AllocationType.Commit | AllocationType.Reserve, MemoryProtection.ExecuteReadWrite);*
+
+Le programme alloue une zone mémoire dans l’espace d’adressage du processus cible 
+
 
 
 
