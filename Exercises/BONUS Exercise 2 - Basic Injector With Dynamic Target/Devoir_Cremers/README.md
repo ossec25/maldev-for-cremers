@@ -9,7 +9,7 @@ A la lecture de l'énoncé et du programme figurant en solution d'exemple, je co
 
 ## Mise en place
 
-- Phase de vérification des arguments en ligne de commande : 
+### Phase de vérification des arguments en ligne de commande : 
 
 *if (args.Length != 1)
 {
@@ -22,7 +22,7 @@ Par cette phase, le programme vérifie que exactement un argument a été fourni
 Cet argument correspond au nom du processus cible.
 
 
-- Phase de normalisation du nom du processus :
+### Phase de normalisation du nom du processus :
 
 *string targetProcName = args[0].Trim();
 if (targetProcName.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
@@ -32,7 +32,7 @@ Le nom du processus fourni par l’utilisateur est nettoyé (suppression des esp
 Cette étape est nécessaire car l’API GetProcessesByName() attend un nom sans extension.
 
 
-- Phase de recherche du processus cible existant :
+### Phase de recherche du processus cible existant :
 
 *Process[] found = Process.GetProcessesByName(targetProcName);*
 
@@ -56,14 +56,14 @@ Si aucune instance du processus n'est trouvée, le programme tente de lancer l'e
 }*
 
 
-- Phase d'affichage de la cible sélectionnée :
+### Phase d'affichage de la cible sélectionnée :
 
 *Console.WriteLine($"Target process: {targetProcName} [{pid}].");*
 
 Le programme affiche le nom du processus cible et son PID.
 
 
-- Phase d'obtention d'un handle vers le processus cible :
+### Phase d'obtention d'un handle vers le processus cible :
 
 *IntPtr procHandle = OpenProcess(ProcessAccessFlags.All, false, pid);*
 
@@ -71,7 +71,7 @@ Une requête est envoyée au système afin d’obtenir un handle vers le process
 Ce handle représente une référence système permettant d’interagir avec le processus.
 
 
-- Phase d'allocation de mémoire dans le processus cible 
+### Phase d'allocation de mémoire dans le processus cible 
 
 *IntPtr memAddr = VirtualAllocEx(procHandle, IntPtr.Zero, (uint)len, AllocationType.Commit | AllocationType.Reserve, MemoryProtection.ExecuteReadWrite);*
 
