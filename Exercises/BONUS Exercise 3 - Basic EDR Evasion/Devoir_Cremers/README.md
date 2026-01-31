@@ -16,7 +16,11 @@ La mise en place des objectifs de l'exercice tels que définis en supra suppose 
 
 • Un programme simple nommé TargetDummy.exe, utilisé comme processus légitime cible de l’injection. Ceci permet de reproduire un scénario d’injection de code dans un processus existant, tout en restant dans un cadre totalement inoffensif.
 
-### Renforcer l’environnement de test côté défense
+### Renforcer l’environnement de test côté défense avec un aapproche EDR
+Plutôt que d’installer un EDR lourd, la défense a été renforcée à l’aide de Microsoft Defender, déjà présent sur la machine, en activant :
+•	la protection fournie par le cloud
+•	la surveillance comportementale
+•	des règles d’Attack Surface Reduction (ASR) en mode audit et non blocage. Ceci permet d’observer le comportement sans bloquer l’exécution et sans fausser les résultats par un blocage artificiel.
 
 
 
