@@ -24,55 +24,45 @@ Chacun de mes dépôts contient :
 ## Liens directs vers chacune de mes solutions personnelles 
 
 
-### Exercise 0 – Setup & Mise en place de l’environnement
+### Exercise 0 – Development Environment
 
-Cet exercice couvre la mise en place de l’environnement de travail
-(VM, outils, configuration de base).
+Mise en place de l’environnement de développement et de test.
 
-- 📘 [Explication – Devoir_cremers](./Exercise0_Setup/Devoir_cremers/README.md)
+- 📘 [Explication – Devoir_Cremers](./Exercises/Exercise 0 - Development Environment/Devoir_Cremers.md)
 
 ---
 
 ### Exercise 1 – Basic Shellcode Loader
 
-Implémentation d’un loader simple exécutant un shellcode en mémoire.
+- 📁 [Solution personnelle – Devoir_Cremers](./Exercises/Exercise 1 - Basic Shellcode Loader/Devoir_Cremers)
 
-- 📁 [Solution personnelle – Devoir_cremers](./Exercise1_Basic_Loader/Devoir_cremers)
+### Bonus – Exercise 1  
+**Basic Loader Without CreateThread**
 
-### Bonus – Exercise 1
-
-Approfondissement du loader (variantes d’exécution et améliorations).
-
-- 📁 [Solution bonus – Devoir_cremers](./Exercise1_Bonus/Devoir_cremers)
+- 📁 [Solution bonus – Devoir_Cremers](./Exercises/BONUS Exercise 1 - Basic Loader Without CreateThread/Devoir_Cremers)
 
 ---
 
-### Exercise 2 – Process Injection
+### Exercise 2 – Basic Shellcode Injector
 
-Injection de shellcode dans un processus distant via les API Windows.
+- 📁 [Solution personnelle – Devoir_Cremers](./Exercises/Exercise 2 - Basic Shellcode Injector/Devoir_Cremers)
 
-- 📁 [Solution personnelle – Devoir_cremers](./Exercise2_Process_Injection/Devoir_cremers)
+### Bonus – Exercise 2  
+**Basic Injector With Dynamic Target**
 
-### Bonus – Exercise 2
-
-Injection dynamique et amélioration de la flexibilité du code.
-
-- 📁 [Solution bonus – Devoir_cremers](./Exercise2_Bonus/Devoir_cremers)
+- 📁 [Solution bonus – Devoir_Cremers](./Exercises/BONUS Exercise 2 - Basic Injector With Dynamic Target/Devoir_Cremers)
 
 ---
 
-### Exercise 3 – EDR Evasion
+### Exercise 3 – Basic AV Evasion
 
-Introduction aux techniques basiques d’évasion EDR
-(obfuscation, exécution mémoire).
+- 📁 [Solution personnelle – Devoir_Cremers](./Exercises/Exercise 3 - Basic AV Evasion/Devoir_Cremers)
 
-- 📁 [Solution personnelle – Devoir_cremers](./Exercise3_EDR_Evasion/Devoir_cremers)
+### Bonus – Exercise 3  
+**Basic EDR Evasion**
 
-### Bonus – Exercise 3
+- 📁 [Solution bonus – Devoir_Cremers](./Exercises/BONUS Exercise 3 - Basic EDR Evasion/Devoir_Cremers)
 
-Renforcement des techniques d’évasion et analyse du comportement Defender/EDR.
-
-- 📁 [Solution bonus – Devoir_cremers](./Exercise3_Bonus/Devoir_cremers)
 
 
 
