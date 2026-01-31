@@ -1,11 +1,11 @@
 # Méthodologie
 
-## Objectif
+## Objectifs
 •	comprendre comment fonctionne un EDR
 
 •	analyser la différence entre détection statique et détection comportementale
 
-•	replacer la technique d’obfuscation utilisée dans l’exercice 3 dans un contexte réaliste de défense
+•	replacer la technique d’obfuscation utilisée dans l’exercice 3 dans un contexte de défense plus pointu (EDR)
  
 
 ## Mise en place
