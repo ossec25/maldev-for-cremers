@@ -21,10 +21,10 @@ Chacun de mes dépôts contient :
 
 ---
 
-# Liens directs vers chacune de mes solutions personnelles 
+## Liens directs vers chacune de mes solutions personnelles 
 
 
-## Exercise 0 – Setup & Mise en place de l’environnement
+### Exercise 0 – Setup & Mise en place de l’environnement
 
 Cet exercice couvre la mise en place de l’environnement de travail
 (VM, outils, configuration de base).
@@ -33,7 +33,7 @@ Cet exercice couvre la mise en place de l’environnement de travail
 
 ---
 
-## Exercise 1 – Basic Shellcode Loader
+### Exercise 1 – Basic Shellcode Loader
 
 Implémentation d’un loader simple exécutant un shellcode en mémoire.
 
@@ -47,7 +47,7 @@ Approfondissement du loader (variantes d’exécution et améliorations).
 
 ---
 
-## Exercise 2 – Process Injection
+### Exercise 2 – Process Injection
 
 Injection de shellcode dans un processus distant via les API Windows.
 
@@ -61,7 +61,7 @@ Injection dynamique et amélioration de la flexibilité du code.
 
 ---
 
-## Exercise 3 – EDR Evasion
+### Exercise 3 – EDR Evasion
 
 Introduction aux techniques basiques d’évasion EDR
 (obfuscation, exécution mémoire).
