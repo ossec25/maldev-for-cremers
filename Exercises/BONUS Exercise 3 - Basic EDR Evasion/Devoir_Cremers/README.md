@@ -22,9 +22,8 @@ Plutôt que d’installer un EDR lourd, la défense a été renforcée à l’ai
 •	Dans le contrôle des applications et du navigateur, et plus précisément les paramètres de protection basée sur la réputation, activation de la vérification des applications et des fichiers, de SmartScreen pour Microsoft Edge et du blocage des applications potentiellement indésirables
 •	Activation/durcissement des règles d’Attack Surface Reduction (ASR) en mode audit (et non blocage). Ceci permet d’observer le comportement sans bloquer l’exécution et sans fausser les résultats par un blocage artificiel.
 
-
-
 ### Observer le comportement du programme face à cette défense étendue de style EDR
+L'observation du comportement s'effectue d'une part à l'examen de l'historique de protection des paramètres de sécurité Windows et d'autre part dans l'observateur d'évènements, dans la zone opérationnelle des applications et service logs dédiés à Windows Defender (voir screenshots). 
 
 ### Analyser les résultats obtenus
 
