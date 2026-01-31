@@ -16,7 +16,7 @@ La mise en place des objectifs de l'exercice tels que définis en supra suppose 
 
 • Un programme simple nommé TargetDummy.exe, utilisé comme processus légitime cible de l’injection. Ceci permet de reproduire un scénario d’injection de code dans un processus existant, tout en restant dans un cadre totalement inoffensif.
 
-### Renforcer l’environnement de test côté défense avec un aapproche EDR
+### Renforcer l’environnement de test côté défense avec un approche EDR
 Plutôt que d’installer un EDR lourd, la défense a été renforcée à l’aide de Microsoft Defender, déjà présent sur la machine, en activant les paramètres de style EDR :  
 •	Dans Windows Security, la protection fournie par le cloud, la soumission automatique d'échantillons, la protection en temps réel, la protection contre les applications potentiellement indésirables, la protection contre les falsifications (Tamper protection)   
 •	Dans le contrôle des applications et du navigateur, et plus précisément les paramètres de protection basée sur la réputation, activation de la vérification des applications et des fichiers, de SmartScreen pour Microsoft Edge et du blocage des applications potentiellement indésirables
@@ -26,7 +26,7 @@ Plutôt que d’installer un EDR lourd, la défense a été renforcée à l’ai
 L'observation du comportement s'effectue d'une part à l'examen de l'historique de protection des paramètres de sécurité Windows et d'autre part dans l'observateur d'évènements, dans la zone opérationnelle des applications et service logs dédiés à Windows Defender (voir screenshots). 
 
 ### Analyser les résultats obtenus
-
+Je constate la détection d'évènements de télémétrie liés à la configuration et à la surveillance dans les logs  
 
 ## Retour d'expérience
 
