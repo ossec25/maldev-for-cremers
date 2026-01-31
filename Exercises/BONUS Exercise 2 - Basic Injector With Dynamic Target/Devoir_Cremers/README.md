@@ -100,7 +100,9 @@ CloseHandle(procHandle);*
 Les handles ouverts précédemment sont fermés afin d’éviter toute fuite de ressources système.
 
 ## Retour d'expérience
-- En tentant d'exécuter le fichier *MaldevEx2bonus.exe* directement en double cliquant dessus, la fenêtre s'ouvrait et se fermait instantanément. Il m'était donc impossible de 
+- En tentant d'exécuter le fichier *MaldevEx2bonus.exe* directement en double cliquant dessus, la fenêtre s'ouvrait et se fermait instantanément. Il m'était donc impossible de lire les messages d'erreur ou les sorties Console.Writeline. J'ai constaté que lorsqu'on lance un programme console Windows hors terminal, il ferme sa fenêtre dès la fin de l'exécution, ce qui est logique. Pour résoudre ce problème, il est nécessaire de lancer le programme en ligne de commande (CMD ou PowerShell). On peut utiliser cmd /k pour forcer la fenêtre à rester ouverte. Pour un débogage, une solution consiste aussi à ajouter temporairement l'instruction Console.Readline() en fin de programme. 
+- Au départ, j'avais erronément fourni le nom de processus "Target.Dummy.exe" mais le programme ne le trouvait pas alors qu'il était en cours sur la machine. Ce problème provenait du fait que l'API système Process.GetProcesssByName() attend le nom du processus sans l'extension ".exe". Pour éviter ce genre d'erreur, j'ai introduit une phase de normalisation du processus recherché, ne conservant que le nom.
+- Lorsque j'ai téléchargé TargetDummy.exe depuis GitHub sur la VM de test, je l'ai fait à deux reprises pour pouvoir effectuer des captures d'écran des différentes phases. Ensuite lorsque j'ai lancé le MaldevEx2bonus.exe en ligne de commande, celui-ci n'a pas trouvé le processus TargetDummy.exe. Il m'a fallu un certain pour réaliser que le processus qui tournait était TargetDummy(1).exe et non TargetDummy.exe, ce qui n'était donc pas le nom de processus que j'avais introduit en ligne de commande. 
 
 
 
