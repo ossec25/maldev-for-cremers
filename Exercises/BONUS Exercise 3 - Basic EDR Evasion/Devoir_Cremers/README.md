@@ -26,8 +26,8 @@ Plutôt que d’installer un EDR lourd, la défense a été renforcée à l’ai
 L'observation du comportement s'effectue d'une part à l'examen de l'historique de protection des paramètres de sécurité Windows et d'autre part dans l'observateur d'évènements, dans la zone opérationnelle des applications et service logs dédiés à Windows Defender (voir screenshots). 
 
 ### Analyser les résultats obtenus
-Je constate la détection d'évènements de télémétrie liés à la configuration et à la surveillance dans les logs  
+Je constate la détection d'évènements de télémétrie liés à la configuration et à la surveillance dans les logs. Le shellcode s'exécute correctement sans qu'aucune alerte (qui serait normalement bloquante) n'ait été généré par Defender. 
 
 ## Retour d'expérience
-
+L'obfuscation est efficace contre la détention statique mais les API utilisées pour allouer de la mémoire et écrire du code en mémoire ainsi que l'exécution de code dynamique sont des comportements potentiellement malveillants qui sont normalement visibles pour une solution orientée comportement de style EDR. Cependant, la configuration appliquée n'a déclenché aucune alerte. L'explication pourrait provenir du fait qu'une configuration de type EDR ne bloque pas systématiquement un comportement atypique, n'alertant que lorsque le niveau de risque est jugé suffisant. Ce résultat pourrait provenir de la nature non malveillante du payload et d'une logique qui privilégie la réduction des faux positifs. Il est probable qu'un EDR plus avancé (de type Bitdefender par exemple) ait produit une alerte.    
 
